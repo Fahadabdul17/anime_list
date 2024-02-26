@@ -9,20 +9,22 @@ const InputSearch = () => {
   const router = useRouter();
 
   const handleSearch = (event) => {
-    event.preventDefault();
-    const keyword = searchRef.current.value;
-
-    router.push(`/search/${keyword}`);
+    if (event.key === "Enter" || event.type === "click") {
+      event.preventDefault();
+      const keyword = searchRef.current.value;
+      router.push(`/search/${keyword}`);
+    }
   };
 
   return (
     <div className="relative">
       <input
         placeholder="search anime..."
-        className=" w-full p-2 rounded"
+        className=" w-full rounded md:px-4 px-2 py-2.5 pe-10 "
         ref={searchRef}
+        onKeyDown={handleSearch}
       />
-      <button className="absolute top-1.5 end-2" onClick={handleSearch}>
+      <button className="absolute top-2 end-2" onClick={handleSearch}>
         <MagnifyingGlass size={23} />
       </button>
     </div>

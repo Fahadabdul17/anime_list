@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-*,
+/* *,
 *::before,
 *::after {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
+} */
 
 
 img {
@@ -23,3 +23,14 @@ img {
 img:hover {
   scale: 102%;
 }
+
+
+.loading {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid lightblue;
+  border-right-color: teal;
+  animation: l2 1s infinite linear;
+}
+@keyframes l2 {to{transform: rotate(1turn)}}
