@@ -30,7 +30,7 @@ img:hover {
   aspect-ratio: 1;
   border-radius: 50%;
   border: 8px solid lightblue;
-  border-right-color: teal;
+  border-right-color: #D21312;
   animation: l2 1s infinite linear;
 }
 @keyframes l2 {to{transform: rotate(1turn)}}
